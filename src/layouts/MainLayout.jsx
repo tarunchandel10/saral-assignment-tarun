@@ -101,7 +101,7 @@ export default function MainLayout({ children }) {
           <h2 className="font-semibold">Gamification</h2>
 
           <div className="flex items-center gap-3">
-            🔔
+            <img src="/Notification.svg" className="w-8 h-8" />
             <div className="w-8 h-8 bg-gray-300 rounded-full"></div>
           </div>
         </div>

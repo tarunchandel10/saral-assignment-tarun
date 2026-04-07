@@ -3,7 +3,7 @@ export default function RewardCard({ data }) {
 
   return (
     <div className="mt-6 w-[400px] rounded-2xl bg-white shadow-lg border border-gray-100 p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-  
+      
   {/* Header */}
   <div className="flex items-center gap-3 mb-4">
     <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-xl">
