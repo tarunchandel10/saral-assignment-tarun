@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+body, button {
+  font-family: 'Inter', sans-serif;
+}
+
+label{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #303030;
+}
+
+.nav_url a span{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+}
+.dashboard_top h2{
+    font-size: 18px;
+}
+.dashboard_content h1{
+    font-size: 28px;
+}
+.dashboard_content p, .dashboard_card h3, .modal_style .selected_opt span, button, .modal_style .calendar{
+    font-size: 16px;
+}
+.dashboard_card p, .modal_style label{
+    font-size: 14px;
+    color: #616161;
+}
+.dashboard_content p{
+    color: #616161;
+}
+.modal_style h2{
+    font-size: 20px;
+}
+.modal_style .calendar{
+    color: #303030;
+}
+.dashboard_card h3{
+    color: #303030;
+}

@@ -1,5 +1,5 @@
 import InlineSelect from "../ui/InlineSelect";
-
+import { useEffect, useState } from "react";
 export default function RewardWithField({
   rewardWith,
   bonusValue,
@@ -9,7 +9,23 @@ export default function RewardWithField({
   dispatch,
   setRewardWith,
   openTierModal,
+  openExternal,       
+  setOpenExternal,    
 }) {
+
+const [forceOpen, setForceOpen] = useState(false);
+
+useEffect(() => {
+  const handler = () => {
+    setForceOpen(true);
+  };
+
+  window.addEventListener("open-reward-with", handler);
+
+  return () => {
+    window.removeEventListener("open-reward-with", handler);
+  };
+}, []);
   return (
     <div className="mb-4">
       <label className="text-[#616161] text-sm">
@@ -17,6 +33,9 @@ export default function RewardWithField({
       </label>
 
       <InlineSelect
+        openExternal={forceOpen}
+        setOpenExternal={setForceOpen}
+
         placeholder="Select a reward"
         options={[
           { label: "Flat $X bonus", value: "Flat $X bonus" },

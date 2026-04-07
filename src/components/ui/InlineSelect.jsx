@@ -7,9 +7,33 @@ export default function InlineSelect({
   onChange,
   renderExtra,
   footer,
+  openExternal,
+  setOpenExternal,
 }) {
+ 
+
+
   const [open, setOpen] = useState(false);
-  const ref = useRef();
+  const ref = useRef(); 
+  
+//    useEffect(() => {
+//   if (openExternal) {
+//     setOpen(true);
+//   }
+// }, [openExternal]);
+
+useEffect(() => {
+  if (openExternal) {
+    setOpen(true);
+
+    // 🔥 reset trigger after opening
+    setTimeout(() => {
+      setOpenExternal && setOpenExternal(false);
+    }, 0);
+  }
+}, [openExternal]);
+
+
 
   // Close on outside click
   useEffect(() => {
@@ -130,7 +154,7 @@ export default function InlineSelect({
                       : ""
                   }`}
                 >
-                  <div className="flex items-center justify-between w-full group">
+                  <div className="flex items-center justify-between w-full group selected_opt">
                     
                     <span>{getDynamicLabel(opt)}</span>
 
@@ -174,7 +198,12 @@ export default function InlineSelect({
           {/* Footer */}
           {footer && (
             <div className="flex gap-3 p-3 border-t">
-              {footer({ close: () => setOpen(false) })}
+              {footer({
+                close: () => {
+                  setOpen(false);
+                  setOpenExternal && setOpenExternal(false);
+                },
+              })}
             </div>
           )}
 

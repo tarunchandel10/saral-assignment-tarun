@@ -29,7 +29,7 @@ export default function CampaignPage() {
   );
 
   const [savedReward, setSavedReward] = useState(null);
-
+  const [openRewardWith, setOpenRewardWith] = useState(false);
   const [salesValue, setSalesValue] = useState("");
   const [bonusValue, setBonusValue] = useState("");
   const [postCount, setPostCount] = useState("");
@@ -53,6 +53,16 @@ export default function CampaignPage() {
     return () => window.removeEventListener("edit-tier", handler);
   }, []);
 
+  
+  useEffect(() => {
+  const handler = () => {
+    setOpenRewardWith(true);
+  };
+
+  window.addEventListener("open-reward-with", handler);
+  return () => window.removeEventListener("open-reward-with", handler);
+}, []);
+
   return (
     <MainLayout>
       
@@ -60,7 +70,7 @@ export default function CampaignPage() {
       <GamificationHero onOpen={() => dispatch(openModal())} />
 
       {/* ✅ MODAL */}
-      <Modal className="max-w-md" isOpen={isModalOpen}  onClose={() => dispatch(closeModal())}>
+      <Modal className="max-w-md modal_style" isOpen={isModalOpen}  onClose={() => dispatch(closeModal())}>
         
         <h2 className="text-xl font-medium text-[#303030]  ">
           Create your reward system
@@ -77,6 +87,7 @@ export default function CampaignPage() {
           setDuration={setDuration}
           dispatch={dispatch}
           setRewardEvent={setRewardEvent}
+          onSaved={() => setOpenRewardWith(true)}  
         />
 
         {/* ✅ Reward With */}
@@ -89,6 +100,8 @@ export default function CampaignPage() {
           dispatch={dispatch}
           setRewardWith={setRewardWith}
           openTierModal={openTierModal}
+          openExternal={openRewardWith}         
+          setOpenExternal={setOpenRewardWith}    
         />
 
         {/* ✅ Time Bound */}
@@ -155,7 +168,7 @@ export default function CampaignPage() {
       <TierModal />
 
       {/* Saved Card */}
-      <div className="mt-6 flex justify-center">
+      <div className="mt-6 flex">
         <RewardCard data={savedReward} />
       </div>
 

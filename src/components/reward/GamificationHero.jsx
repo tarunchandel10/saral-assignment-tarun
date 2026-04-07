@@ -1,19 +1,20 @@
 export default function GamificationHero({ onOpen }) {
   return (
-    <div className="relative bg-white rounded-2xl border border-purple-200 p-12 overflow-hidden">
+    <>
+    <div className="relative rounded-2xl border border-purple-200 p-12 overflow-hidden bg-[url('/home-bg.svg')] bg-cover bg-center pt-15 pb-20 dashboard_content">
 
       {/* Grid Background */}
-      <div className="absolute inset-0 opacity-20 bg-[linear-gradient(#f3e8ff_1px,transparent_1px),linear-gradient(90deg,#f3e8ff_1px,transparent_1px)] bg-[size:40px_40px]" />
+      <div className="absolute inset-0 opacity-20 bg-[linear-gradient(#f3e8ff_1px,transparent_1px),linear-gradient(90deg,#f3e8ff_1px,transparent_1px)] bg-[size:40px_40px] pb-20" />
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-xs mx-auto">
+      <div className="relative z-10 text-center max-w-sm mx-auto">
         
         <h1 className="text-3xl font-semibold text-[#561056]">
           Gamify your Campaign
         </h1>
 
         <p className="text-gray-500 mt-2 ">
-          Enable gamification to start crafting your custom reward system.
+          Enable gamification to start crafting <br /> your custom reward system.
         </p>
 
         <button
@@ -25,9 +26,11 @@ export default function GamificationHero({ onOpen }) {
       </div>
 
       {/* Cards */}
-      <div className="relative z-10 mt-10 grid grid-cols-3 gap-6">
+      
+    </div>
+    <div className="relative z-10  grid grid-cols-3 gap-6 -mt-12 pl-5 pr-5 dashboard_card">
 
-        <div className="bg-white border rounded-xl p-6 text-center shadow-sm">
+        <div className="bg-white border rounded-xl p-6 text-center shadow-sm bg-[url('/card-bg.svg')] bg-cover bg-center">
           <div className="size-16 mx-auto mb-4 bg-purple-100 flex items-center justify-center rounded-xl">
             <img src="/icon-one.png" />
           </div>
@@ -39,7 +42,7 @@ export default function GamificationHero({ onOpen }) {
           </p>
         </div>
 
-        <div className="bg-white border rounded-xl p-6 text-center shadow-sm">
+        <div className="bg-white border rounded-xl p-6 text-center shadow-sm bg-[url('/card-bg.svg')] bg-cover bg-center">
           <div className="size-16 mx-auto mb-4 bg-purple-100 flex items-center justify-center rounded-xl">
             <img src="/icon-two.png" />
           </div>
@@ -51,7 +54,7 @@ export default function GamificationHero({ onOpen }) {
           </p>
         </div>
 
-        <div className="bg-white border rounded-xl p-6 text-center shadow-sm">
+        <div className="bg-white border rounded-xl p-6 text-center shadow-sm bg-[url('/card-bg.svg')] bg-cover bg-center">
           <div className="size-16 mx-auto mb-4 bg-purple-100 flex items-center justify-center rounded-xl">
             <img src="/icon-three.png" />
           </div>
@@ -64,6 +67,6 @@ export default function GamificationHero({ onOpen }) {
         </div>
 
       </div>
-    </div>
+      </>
   );
 }

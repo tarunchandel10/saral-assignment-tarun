@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import InlineSelect from "../ui/InlineSelect";
 
 export default function RewardEventField({
@@ -10,7 +11,11 @@ export default function RewardEventField({
   setDuration,
   dispatch,
   setRewardEvent,
+  onSaved,   
 }) {
+
+
+  
   return (
     <div className="my-4">
       <label className="text-[#616161] text-sm">
@@ -18,6 +23,7 @@ export default function RewardEventField({
       </label>
 
       <InlineSelect
+     
   placeholder="Select an event"
   options={[
     { label: "Cross $X in sales", value: "Cross $X in sales" },
@@ -91,7 +97,10 @@ export default function RewardEventField({
               </button>
 
               <button
-                onClick={() => close()}
+                onClick={() => {
+                    close();
+                    window.dispatchEvent(new Event("open-reward-with"));
+                  }}
                 className="flex-1 px-4 py-2 text-white rounded-lg bg-[#F68DF6]"
               >
                 Save
@@ -116,7 +125,10 @@ export default function RewardEventField({
               </button>
 
               <button
-                onClick={() => close()}
+                onClick={() => {
+                    close();
+                    window.dispatchEvent(new Event("open-reward-with"));
+                  }}
                 className="flex-1 px-4 py-2 text-white rounded-lg bg-[#F68DF6]"
               >
                 Save
@@ -136,7 +148,10 @@ export default function RewardEventField({
             </button>
 
             <button
-              onClick={() => close()}
+              onClick={() => {
+                    close();
+                    window.dispatchEvent(new Event("open-reward-with"));
+                  }}
               className="flex-1 px-4 py-2 text-white rounded-lg bg-[#F68DF6]"
             >
               Save

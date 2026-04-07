@@ -8,7 +8,7 @@ export default function MainLayout({ children }) {
       <div className="w-64 bg-[#FDEFFD] border-r p-4 relative">
         <h2 className="text-lg font-semibold mb-6">Saral</h2>
 
-        <div className="space-y-2 text-sm">
+        <div className="space-y-2 text-sm nav_url">
 
           {/* Home */}
           <NavLink
@@ -94,10 +94,10 @@ export default function MainLayout({ children }) {
       </div>
 
       {/* Right side */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col dashboard_top">
         
         {/* Header */}
-        <div className="bg-white border-b flex items-center justify-between px-6 py-3">
+        <div className="bg-white  flex items-center justify-between px-6 py-3">
           <h2 className="font-semibold">Gamification</h2>
 
           <div className="flex items-center gap-3">
