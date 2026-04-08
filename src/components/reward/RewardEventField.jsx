@@ -17,8 +17,8 @@ export default function RewardEventField({
 
   
   return (
-    <div className="my-4">
-      <label className="text-[#616161] text-sm">
+    <div className="my-3 md:my-4">
+      <label className="text-[#616161] text-xs md:text-sm">
         Reward event <span className="text-red-500">*</span>
       </label>
 

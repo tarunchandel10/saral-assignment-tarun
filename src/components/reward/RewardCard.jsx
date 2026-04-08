@@ -3,14 +3,14 @@ export default function RewardCard({ data }) {
 
   return (
     <div className="mt-6 flex border-t">
-    <div className="mt-6 w-[400px] rounded-2xl bg-white shadow-lg border border-gray-100 p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+    <div className="mt-6 w-full md:w-96 lg:w-[400px] rounded-2xl bg-white shadow-lg border border-gray-100 p-4 md:p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       
   {/* Header */}
   <div className="flex items-center gap-3 mb-4">
-    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-xl">
+    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-lg md:text-xl">
       🎉
     </div>
-    <h3 className="text-lg font-semibold text-gray-800">
+    <h3 className="text-base md:text-lg font-semibold text-gray-800">
       Reward Created
     </h3>
   </div>
@@ -19,7 +19,7 @@ export default function RewardCard({ data }) {
   <div className="h-px bg-gray-100 mb-4"></div>
 
   {/* Content */}
-  <div className="space-y-3 text-sm">
+  <div className="space-y-3 text-xs md:text-sm">
     
     <div className="flex justify-between">
       <span className="text-gray-500">Event</span>

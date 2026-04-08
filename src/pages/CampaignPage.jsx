@@ -115,11 +115,11 @@ export default function CampaignPage() {
         />
 
         {/* ✅ Bottom Buttons */}
-        <div className="flex justify-end gap-3 mt-6">
+        <div className="flex flex-col-reverse sm:flex-row justify-end gap-2 sm:gap-3 mt-4 md:mt-6">
           
           <button
             onClick={() => dispatch(closeModal())}
-            className="flex-1 px-4 py-2 border rounded-lg"
+            className="flex-1 px-3 md:px-4 py-2 border rounded-lg text-sm md:text-base"
           >
             Cancel
           </button>
