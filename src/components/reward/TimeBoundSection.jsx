@@ -23,7 +23,7 @@ export default function TimeBoundSection({
         </div>
         
 
-        <div className={`w-11 h-6 rounded-full p-1 ${isTimeBound ? "bg-purple-500" : "bg-gray-300"}`}>
+        <div className={`w-11 h-6 rounded-full p-1 ${isTimeBound ? "bg-[#C530C5]" : "bg-gray-300"}`}>
           <div className={`bg-white w-4 h-4 rounded-full ${isTimeBound ? "translate-x-5" : ""}`} />
         </div>
       </div>

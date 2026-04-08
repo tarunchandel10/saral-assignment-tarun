@@ -48,7 +48,7 @@ export default function RewardEventField({
             setSalesValue(e.target.value.replace(/\D/g, ""))
           }
           placeholder="$ | e.g. 100"
-          className="w-full border rounded-lg px-3 py-2 mt-2"
+          className="w-full border rounded-lg px-3 py-2 mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C530C5]"
         />
       );
     }
@@ -61,12 +61,12 @@ export default function RewardEventField({
             onChange={(e) =>
               setPostCount(e.target.value.replace(/\D/g, ""))
             }
-            className="w-1/2 border rounded-lg px-3 py-2"
+            className="w-1/2 border rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C530C5]"
           />
           <select
             value={duration}
             onChange={(e) => setDuration(e.target.value)}
-            className="w-1/2 border rounded-lg px-3 py-2"
+            className="w-1/2 border rounded-lg px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C530C5]"
           >
             <option value="">Select duration</option>
             <option value="14 days">14 days</option>

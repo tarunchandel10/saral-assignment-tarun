@@ -6,7 +6,7 @@ export default function MainLayout({ children }) {
       
       {/* Sidebar */}
       <div className="w-64 bg-[#FDEFFD] border-r p-4 relative">
-        <h2 className="text-lg font-semibold mb-6">Saral</h2>
+        <h2 className="text-lg font-semibold mb-6 px-3">Saral</h2>
 
         <div className="space-y-2 text-sm nav_url">
 

@@ -34,7 +34,7 @@ export default function TierModal() {
         <select
           value={selectedTier}
           onChange={(e) => setSelectedTier(e.target.value)}
-          className="w-full border rounded-lg px-3 py-2 mt-2"
+          className="w-full border rounded-lg px-3 py-2 mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C530C5]"
         >
           <option value="">Select a tier</option>
           {tiers.map((t, i) => (

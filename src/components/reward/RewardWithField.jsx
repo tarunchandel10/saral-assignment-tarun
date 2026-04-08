@@ -74,7 +74,7 @@ useEffect(() => {
                   setBonusValue(e.target.value.replace(/\D/g, ""))
                 }
                 placeholder="$ | e.g. 100"
-                className="w-full border rounded-lg px-3 py-2 mt-2"
+                className="w-full border rounded-lg px-3 py-2 mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C530C5]"
               />
             );
           }

@@ -2,6 +2,7 @@ export default function RewardCard({ data }) {
   if (!data) return null;
 
   return (
+    <div className="mt-6 flex border-t">
     <div className="mt-6 w-[400px] rounded-2xl bg-white shadow-lg border border-gray-100 p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       
   {/* Header */}
@@ -39,6 +40,7 @@ export default function RewardCard({ data }) {
 
   </div>
 
+</div>
 </div>
   );
 }

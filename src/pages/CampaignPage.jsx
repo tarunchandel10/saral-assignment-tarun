@@ -168,10 +168,7 @@ export default function CampaignPage() {
       <TierModal />
 
       {/* Saved Card */}
-      <div className="mt-6 flex">
         <RewardCard data={savedReward} />
-      </div>
-
     </MainLayout>
   );
 }

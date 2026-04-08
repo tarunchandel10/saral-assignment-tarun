@@ -108,7 +108,7 @@ export default function DatePicker({ value, onChange }) {
               disabled={isPast}
               className={`text-sm rounded-lg py-1 ${
                 isSelected
-                  ? "bg-purple-600 text-white"
+                  ? "bg-[#C530C5] text-white"
                   : isPast
                   ? "text-gray-300 cursor-not-allowed"
                   : "hover:bg-gray-100"
