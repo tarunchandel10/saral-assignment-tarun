@@ -16,7 +16,7 @@ export default function MainLayout({ children }) {
           md:translate-x-0 md:static
         `}
       >
-        <h2 className="text-lg font-semibold mb-6 px-3">Saral</h2>
+        <h2 className="text-lg font-semibold mb-6 px-3">Logo</h2>
 
         <div className="space-y-2 text-sm nav_url">
 
